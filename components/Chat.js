@@ -26,7 +26,8 @@ const Chat = ({ modalVisible, setModalVisible }) => {
           behaviour={Platform.OS === "ios" ? "padding" : "height"}
           style={{ flex: 1 }}
         >
-        
+          <TouchableWithoutFeedback style={{ width: "100%", height: "100%" }}>
+            <View style={{ flex: 1 }}>
               <ChatHeader setModalVisible={setModalVisible} />
               {/* Chat Messages */}
 
@@ -54,7 +55,8 @@ const Chat = ({ modalVisible, setModalVisible }) => {
                   </TouchableOpacity>
                 </View>
               </View>
-          
+            </View>
+          </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
       </SafeAreaView>
     </View>
